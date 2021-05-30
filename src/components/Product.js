@@ -18,7 +18,6 @@ function Product({ id, title, price, description, category, image }) {
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
             className="relative flex flex-col m-5 bg-white p-10 z-30">
             <p className="absolute top-2 right-2 text-sm italic text-gray-400">{category}</p>
             <Image src={image} height={200} width={200} objectFit="contain" />
@@ -31,7 +30,7 @@ function Product({ id, title, price, description, category, image }) {
                     ))}
             </div>
             {hasPrime && <p>Has prime del</p>}
-            <p className="text-sm my-2 line-clamp-3">{description}</p>
+            <p className="text-sm my-2 line-clamp-2">{description}</p>
             <div className="mb-5">
                 <Currency quantity={price * 60} currency="INR" />
             </div>
